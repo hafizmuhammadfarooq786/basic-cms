@@ -1,0 +1,73 @@
+form-control {
+    color: #9e9e9e;
+}
+
+label {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: #424242;
+    opacity: 1;
+}
+
+.btn:active,
+.btn:focus,
+.btn-primary:active,
+.btn-primary:focus {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    box-shadow: none !important;
+}
+
+.threshold,
+.scoreboard {
+    padding: 23px 23px;
+    width: 100%;
+}
+
+.threshold {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.scoreboard-title {
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: #2196f3;
+    opacity: 1;
+}
+
+.three-fields {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.threshold-container {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .three-fields {
+        flex-direction: column !important;
+        padding: 0 !important;
+    }
+
+    .col-4,
+    .col-9 {
+        max-width: 100% !important;
+        padding: 10px 0px !important;
+    }
+
+    .threshold-container {
+        flex-direction: column-reverse !important;
+    }
+}

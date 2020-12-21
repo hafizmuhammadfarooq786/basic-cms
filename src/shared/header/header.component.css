@@ -1,0 +1,80 @@
+#logo {
+  height: 64px;
+  object-fit: contain;
+  padding: 0px 15px;
+  vertical-align: middle;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 99999;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+h3{
+    color: #2196f3;
+    font-size: 18px !important;
+}
+.statics {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem 2rem;
+}
+.navbar-dark .navbar-brand span {
+  font-weight: 600;
+  vertical-align: middle;
+  margin: auto 8%;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #2196f3;
+  font-size: medium;
+  font-family: Roboto-Bold;
+  font-weight: 500;
+}
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:visited,
+.navbar-toggler:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+.navbar-toggler-icon {
+  background-image: none;
+  color: #2196f3;
+}
+.navbar .nav-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px);
+}
+
+.dropdown-menu {
+  margin-top: 0;
+}
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #2196f3;
+  }
+  .nav-item {
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    margin-right: 0px !important;
+  }
+  .navbar-collapse a {
+    color: #fff !important;
+  }
+}
+.navbar-toggler {
+  margin: 10px 10px 0;
+}

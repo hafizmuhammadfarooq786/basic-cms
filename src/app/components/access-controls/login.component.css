@@ -1,0 +1,45 @@
+.login {
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: -1px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.logo {
+  height: auto;
+  padding: 1.25rem;
+  background-color: #2196f3;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 16px 16px 0 0;
+}
+.logo h2{
+    color: #fff;
+}
+.loginForm {
+  padding: 2em 3em;
+  width: 100%;
+}
+label {
+  float: left;
+  color: #8c9094;
+}
+@media (min-width: 576px) {
+  .login {
+    width: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .login {
+    width: 335px;
+  }
+  .button-group {
+    display: flex !important;
+  }
+  .button-group > input {
+    min-width: 90px;
+  }
+}

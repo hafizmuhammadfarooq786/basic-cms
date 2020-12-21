@@ -1,0 +1,27 @@
+
+
+.main-content {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.far {
+    position: relative;
+    font-size: 8.5rem;
+    color: #2196f3;
+    text-align: center;
+}
+
+
+.msg {
+    text-align: center;
+    font-family: "ProductSans-Bold";
+    font-size: 1.6rem;
+    position: relative;
+    margin-top: 48px !important;
+}
+

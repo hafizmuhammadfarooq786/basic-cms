@@ -1,0 +1,92 @@
+<app-loader></app-loader>
+<main role="main" class="main">
+  <div class="content">
+    <div class="card h-56">
+      <a class="breadcrumb-link"
+        ><h6 class="main-breadcrumb">
+          Organization Locations
+        </h6></a
+      >
+    </div>
+    <div class="main-content">
+      <div class="col-lg-6 col-12 p-0 card">
+        <form
+          [formGroup]="locationForm"
+          (ngSubmit)="addOrganizationLocation()"
+          class="form-horizontal"
+        >
+          <!-- Details card -->
+          <div class="scoreboard">
+            <div class="page-title">
+              <div class="text-left">
+                <div class="d-flex head" style="align-items: center;">
+                  <h6 class="col-9 ml-3 scoreboard-title" style="float: left;">
+                    Create Location
+                  </h6>
+                  <div class="col-3 pr-5">
+                    <input
+                      type="submit"
+                      style="float: right;"
+                      class="btn btn-primary"
+                      value="Add"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="three-fields mt-4 p-0">
+              <div class="col-12 p-0 mr-4">
+                <div class="p-0">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="location"
+                    placeholder="Write location"
+                    aria-required="true"
+                  />
+                  <div
+                    *ngIf="isSubmitted && locationForm.controls.location.errors"
+                    class="alert alert-danger mt-2 mb-0"
+                    role="alert"
+                  >
+                    <p *ngIf="locationForm.controls.location.errors.required">
+                      Field required
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="progress-card mobile-margin card-1 ml-5">
+        <div class="card-outlet">
+          <h6 class="card-label">Organization Locations</h6>
+          <div class="table-responsive course-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Locations</th>
+                  <th scope="col" class="text-center">Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let loc of locations; let i = index">
+                  <td class="heading">{{ loc.name }}</td>
+                  <td class="text-center">
+                    <i
+                      (click)="deleteOrganizationLocation(loc.pushId)"
+                      style="color: red; cursor: pointer;"
+                      class="fas fa-trash"
+                    ></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

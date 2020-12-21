@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid statics">
+        <!-- Logo -->
+        <div *ngIf="usersServices.isLoggedIn()">
+            <a class="navbar-brand" routerLink="{{ path }}" routerLinkActive="active">
+                <h3> Content Management System </h3>
+            </a>
+        </div>
+        <!-- Toggel Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="vertical-align: sub;"></i>
+            </span>
+        </button>
+
+        <!-- Navigation Menus List -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mobile">
+                    <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        routerLink="/banner">
+                        Banner Content
+                    </a>
+                </li>
+                <li class="nav-item mobile">
+                    <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        routerLink="/contact">
+                        Contact Banner
+                    </a>
+                </li>
+                <!-- <li class="nav-item mobile">
+                    <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        routerLink="/types">
+                        Types
+                    </a>
+                </li>
+                <li class="nav-item mobile">
+                    <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        routerLink="/locations">
+                        Locations
+                    </a>
+                </li>
+                <li class="nav-item mobile">
+                    <a class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        routerLink="/banner">
+                        Banner
+                    </a>
+                </li> -->
+                <li class="nav-item">
+                    <a style="color: #fff; cursor: pointer;margin: 0px !important;" class="btn btn-custom nav-link"
+                        (click)="usersServices.logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,55 @@
+<app-loader></app-loader>
+<main role="main" class="main">
+    <div class="content">
+        <div class="card h-56">
+            <a class="breadcrumb-link" routerLink="/admin/dashboard">
+                <h6 class="main-breadcrumb">Header Banner</h6>
+            </a>
+        </div>
+        <div class="main-content">
+            <div class="col-lg-8 col-12 p-0 card">
+                <form [formGroup]="bannerContextForm" (ngSubmit)="onUpdate()" class="form-horizontal">
+                    <!-- Threshold -->
+                    <div class="threshold-container">
+                        <div class="col-12 form-group">
+                            <input type="submit" style="float: right;" class="btn btn-primary" value="Update Banner"
+                                readonly />
+                        </div>
+                    </div>
+
+                    <!-- Scoreboard -->
+                    <div class="scoreboard">
+                        <div class="page-title">
+                            <div class="text-left mb-4">
+                                <h6 class="scoreboard-title">Home Banner</h6>
+                            </div>
+                        </div>
+                        <div class="three-fields pt-0">
+                            <div class="col-12 p-0 mr-4">
+                                <label for="tagLine">
+                                    Title Text
+                                </label>
+                                <div class="p-0">
+                                    <input class="form-control" type="text" name="tagLine" formControlName="tagLine"
+                                        value="{{ tagLine }}" (change)="onchangetagLine($event.target.value)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="three-fields">
+                            <div class="col-12 p-0 mr-4">
+                                <label for="title">
+                                    Description Text
+                                </label>
+                                <div class="p-0">
+                                    <textarea class="form-control" type="text" name="description" rows="5"
+                                        formControlName="description" value="{{ description }}"
+                                        (change)="onchangeDescription($event.target.value)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

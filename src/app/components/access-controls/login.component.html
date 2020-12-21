@@ -1,0 +1,47 @@
+<app-loader></app-loader>
+<div class="login">
+    <div class="logo">
+        <h2>Login</h2>
+    </div>
+    <div class="loginForm">
+        <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <label class="control-label">Email <span class="required">*</span></label>
+                <div class="email">
+                    <input type="email" class="form-control" formControlName="email" placeholder="Email"
+                        aria-required="true" />
+                    <div *ngIf="isSubmitted && loginForm.controls.email.errors" class="alert alert-danger mt-2"
+                        role="alert">
+                        <p *ngIf="loginForm.controls.email.errors.required">
+                            Email is required
+                        </p>
+                        <p *ngIf="loginForm.controls.email.hasError('pattern')">
+                            Email not valid. e.g abc@domain.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label class="control-label">Password <span class="required">*</span></label>
+                <div class="password">
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password"
+                        aria-required="true" />
+                    <div *ngIf="isSubmitted && loginForm.controls.password.errors" class="alert alert-danger mt-2"
+                        role="alert">
+                        <p *ngIf="loginForm.controls.password.errors.required">
+                            Password is required
+                        </p>
+                        <p *ngIf="loginForm.controls.password.hasError('minlength')">
+                            Minimum of 8 characters
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group button-group">
+                <input style="font-weight: 600;" type="reset" class="btn btn-custom mr-5" value="Reset" readonly />
+                <input style="font-weight: 600;" type="submit" class="btn btn-custom" value="Login" readonly />
+            </div>
+        </form>
+    </div>
+</div>
